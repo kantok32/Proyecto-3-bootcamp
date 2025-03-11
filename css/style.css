@@ -1,0 +1,239 @@
+/* css/style.css */
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333; /* Color de texto general más oscuro para mejor contraste */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Centrar títulos de sección */
+    color: #2d2424; /* Título se mantiene en color oscuro */
+}
+
+/* Header */
+.header {
+    background: #f8f0e8; /* Fondo del header más claro */
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e0d8cc; /* Línea divisoria sutil bajo el header */
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav a {
+    color: #555; /* Navegación en color más tenue */
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #c7a17a; /* Hover más destacado */
+}
+
+/* Sección Main */
+.main {
+    padding-top: 80px; /* Ajuste para el header fijo */
+    padding-bottom: 4rem; /* Añadido padding inferior al main */
+    background-color: #fafafa; /* Fondo ligeramente grisáceo para el Main */
+}
+
+.main-hero {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://www.shutterstock.com/image-vector/banner-coffee-shop-house-cafebar-600nw-1947776218.jpg') center/cover;
+    height: 60vh; /* Hero más contenido, menos altura completa */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem 5%;
+    margin-bottom: 2rem; /* Separación del resto del Main */
+}
+
+.main-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.main-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.main-communication {
+    padding: 0 5%;
+}
+
+.communication-block {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.block-large {
+    /* Estilos específicos si el bloque grande necesita diferenciación */
+}
+
+.communication-blocks {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.communication-blocks .communication-block {
+    flex: 1; /* Distribución equitativa del espacio */
+}
+
+/* Sección Productos */
+.products {
+    padding: 4rem 5%;
+    background-color: #f0ece5; /* Fondo más cálido para Productos */
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    padding: 1rem;
+    color: #2d2424;
+}
+
+.product-card p {
+    padding: 0 1rem;
+    color: #666;
+}
+
+.price {
+    display: block;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #c7a17a;
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    background: #2d2424;
+    color: white;
+    padding: 4rem 5% 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: #ddd; /* Títulos del footer más claros */
+}
+
+.footer-section p, .footer-section a {
+    color: #ccc; /* Textos y enlaces del footer más claros */
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: white; /* Hover en enlaces del footer */
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #555; /* Línea divisoria en el footer */
+}
+
+.footer-bottom p {
+    color: #ccc;
+}
+
+/* Media Queries para responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav {
+        margin-top: 1rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-hero {
+        height: auto; /* Hero se ajusta al contenido en móviles */
+        padding: 3rem 5%; /* Más padding vertical en móviles */
+    }
+
+    .main-hero h1 {
+        font-size: 2rem; /* Título más pequeño en móviles */
+    }
+
+    .main-hero p {
+        font-size: 1rem; /* Texto más pequeño en móviles */
+    }
+
+    .communication-blocks {
+        flex-direction: column; /* Bloques de comunicación apilados en móvil */
+    }
+}
